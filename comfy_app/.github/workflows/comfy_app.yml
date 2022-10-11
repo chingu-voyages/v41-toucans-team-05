@@ -1,0 +1,16 @@
+name: comfy_app
+
+on: push
+
+jobs: 
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - names: Checkout code
+        uses: actions/checkout@v2
+
+      -name: Run comfy_app
+       uses: github/comfy_app@v3
+       env: 
+          DEFAULT_BRANCH: main
+          GITHUB TOKEN: ${{ secrets.GITHUB TOKEN }}
