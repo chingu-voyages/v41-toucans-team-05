@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Showtime() {
   let time = new Date().toLocaleTimeString();
-  let [currentTime, changeTime] = useState(time);
+  const [currentTime, changeTime] = useState(time);
 
   function checkTime() {
     time = new Date().toLocaleTimeString();
@@ -12,8 +12,8 @@ export default function Showtime() {
   setInterval(checkTime, 1000);
 
   return (
-    <>
+    <div>
       <p>{currentTime}</p>
-    </>
+    </div>
   );
 }

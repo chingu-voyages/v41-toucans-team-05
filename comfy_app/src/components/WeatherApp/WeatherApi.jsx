@@ -1,15 +1,15 @@
 import '../../App.css';
-import { useState, useEffect } from 'react';
-import React from 'react';
-import Showtime from '../../components/WeatherApp/Showtime';
-import useGeoLocation from '../../hooks/useGeolocation';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
+import Showtime from './Showtime';
+import useGeoLocation from '../../hooks/useGeolocation';
+
 
 function WeatherApi() {
-  const location = useGeoLocation();
-  const lat = JSON.stringify(location.coordinates.lat);
-  const lon = JSON.stringify(location.coordinates.lon);
+  const locations = useGeoLocation();
+  const lat = JSON.stringify(locations.coordinates.lat);
+  const lon = JSON.stringify(locations.coordinates.lon);
   const [name, setName] = useState([]);
   const [sky, setSky] = useState([]);
   // const [icon, setIcon] = useState([]);
@@ -28,9 +28,6 @@ function WeatherApi() {
         // setIcon(res.data.weather[0].icon);
         setTemp(res.data.main.temp);
 
-
-        console.log(res.data);
-
         function backGround() {
           if (res.data.weather[0].id < 250) {
             return (bg = "url('../images/thunder.jpg')");
@@ -45,14 +42,12 @@ function WeatherApi() {
           } else if (res.data.weather[0].id === 800) {
             return (bg = "url('../images/clear.jpg')");
           } else {
-            return (bg = "url('../images/clouds.jpg')");
+            (bg = "url('../images/clouds.jpg')");
           }
         }
         backGround();
         document.getElementById('1').style.backgroundImage = bg;
-
       });
-
   });
 
   return (
