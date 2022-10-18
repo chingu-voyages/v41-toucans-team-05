@@ -1,10 +1,9 @@
 import '../../App.css';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Moment from 'react-moment';
+import axios from 'axios';
 import Showtime from './Showtime';
 import useGeoLocation from '../../hooks/useGeolocation';
-
 
 function WeatherApi() {
   const locations = useGeoLocation();
@@ -16,7 +15,7 @@ function WeatherApi() {
   const [temp, setTemp] = useState([]);
   const today = new Date();
 
-  let bg = '';
+  const bg = '';
   useEffect(() => {
     axios
       .get(
@@ -30,20 +29,24 @@ function WeatherApi() {
 
         function backGround() {
           if (res.data.weather[0].id < 250) {
-            return (bg = "url('../images/thunder.jpg')");
-          } else if (res.data.weather[0].id < 350) {
-            return (bg = "url('../images/drizzle.jpg')");
-          } else if (res.data.weather[0].id < 550) {
-            return (bg = "url('../images/rain.jpg')");
-          } else if (res.data.weather[0].id < 650) {
-            return (bg = "url('../images/snow.jpg')");
-          } else if (res.data.weather[0].id < 790) {
-            return (bg = "url('../images/atmosphere.jpg')");
-          } else if (res.data.weather[0].id === 800) {
-            return (bg = "url('../images/clear.jpg')");
-          } else {
-            (bg = "url('../images/clouds.jpg')");
+            return `(bg = "url('../images/thunder.jpg')")`;
           }
+          if (res.data.weather[0].id < 350) {
+            return `(bg = "url('../images/drizzle.jpg')")`;
+          }
+          if (res.data.weather[0].id < 550) {
+            return `(bg = "url('../images/rain.jpg')")`;
+          }
+          if (res.data.weather[0].id < 650) {
+            return `(bg = "url('../images/snow.jpg')")`;
+          }
+          if (res.data.weather[0].id < 790) {
+            return `(bg = "url('../images/atmosphere.jpg')")`;
+          }
+          if (res.data.weather[0].id === 800) {
+            return `(bg = "url('../images/clear.jpg')")`;
+          }
+          return `bg = "url('../images/clouds.jpg')"`;
         }
         backGround();
         document.getElementById('1').style.backgroundImage = bg;
