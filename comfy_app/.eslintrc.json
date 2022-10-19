@@ -44,7 +44,7 @@
         "allowChildren": false
       }]
     },
-    "no-unused-vars": "off",
+    
     "no-console": "off",
     "func-names": "off",
     "no-process-exit": "off",
