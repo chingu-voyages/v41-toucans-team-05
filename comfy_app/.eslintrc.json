@@ -17,6 +17,14 @@
   },
   "plugins": ["react", "prettier", "jest"],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "endOfLine": "auto"
+      }
+    ],
       // Disabled, we only require label to nest input OR use htmlFor
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/b800f40a2a69ad48015ae9226fbe879f946757ed/docs/rules/label-has-associated-control.md
       "jsx-a11y/label-has-associated-control": ["off", {
@@ -36,14 +44,6 @@
         "allowChildren": false
       }]
     },
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "jsxSingleQuote": true,
-        "endOfLine": "auto"
-      }
-    ],
     "no-unused-vars": "warn",
     "no-console": "off",
     "func-names": "off",
