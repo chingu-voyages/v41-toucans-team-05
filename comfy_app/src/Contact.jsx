@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 
 function Contact() {
-  const [form, setForm] = useState('Submit');
+  const [form] = useState('Submit');
   return (
     <div className='container text-center'>
       <h2 className='mb-3'>Contact Us</h2>
