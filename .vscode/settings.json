@@ -1,7 +1,10 @@
 {
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"editor.wordWrap": "on",
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.formatOnSave": true,
   "javascript.format.semicolons": "insert",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
