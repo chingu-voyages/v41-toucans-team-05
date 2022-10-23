@@ -2,7 +2,7 @@ import '../../App.css';
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment';
 import axios from 'axios';
-import Showtime from './Showtime';
+import Showtime from '../liveDateAndTime/Showtime';
 import useGeoLocation from '../../hooks/useGeolocation';
 
 function WeatherApi() {
