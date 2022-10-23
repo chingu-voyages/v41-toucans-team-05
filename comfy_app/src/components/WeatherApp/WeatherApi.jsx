@@ -59,7 +59,7 @@ function WeatherApi() {
         <div className='top'>
           <div className='location'>
             <p>
-              <span className='material-icons'>place</span>
+              <span className='material-icons'></span>
               {name}
             </p>
           </div>
