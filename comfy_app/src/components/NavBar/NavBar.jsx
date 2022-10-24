@@ -41,9 +41,9 @@ function NavBar() {
                     <Nav.Link as={Link} to='/signUp'>
                       SignUp
                     </Nav.Link>
-                    <Nav.Link as={Link} to='/audioVideo'>
+                    {/* <Nav.Link as={Link} to='/audioVideo'>
                       Audio/Video
-                    </Nav.Link>
+                    </Nav.Link> */}
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
