@@ -1,4 +1,5 @@
 import '../../App.css';
+import '../Weatherapi/layout.scss'
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment';
 import axios from 'axios';

@@ -1,52 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+// @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
+
+
+// boxsizing
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-body {
-	font-family: "Quicksand", sans-serif;
-	font-size: 15px;
-	color: #fff;
+
+
+// paragraph
+p {
+  font-size: 1.6rem;
 }
-a {
-	color: inherit;
-	text-decoration: none;
-}
-li {
-	list-style: none;
-}
-input {
-	border: none;
-	outline: none;
-}
-button {
-	border: none;
-	background: none;
-}
-.App {
-	display: flex;
-	justify-content: center;
-	padding: 50px;
-}
+
+
+// body {
+// 	font-family: "Quicksand", sans-serif;
+// 	font-size: 15px;
+// 	color: #fff;
+// }
+
+
+// a {
+// 	color: inherit;
+// 	text-decoration: none;
+// }
+
+
+// li {
+// 	list-style: none;
+// }
+
+
+// input {
+// 	border: none;
+// 	outline: none;
+// }
+
+
+
+// button {
+// 	border: none;
+// 	background: none;
+// }
+
+
+// .App {
+// 	display: flex;
+// 	justify-content: center;
+// 	padding: 50px;
+// }
+
+
+
 .container {
 	width: 30vw;
 	height: calc(100vh - 100px);
 	padding: 30px;
-	background-image: url("../../public/images/main-bg.jpg");
+	background-image: url("../../../public/images/clear.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	max-width: 350px;
+	// max-width: 350px;
 	border-radius: 25px;
 	.top {
 		width: 100%;
 		height: 50%;
 		.location {
+			color: white;
 			margin-bottom: 30px;
-			text-align: left;
+			text-align: center;
 			.material-icons {
 				font-size: 15px;
 			}
@@ -55,6 +82,7 @@ button {
 			margin-bottom: 15px;
 			font-size: 18px;
 			font-weight: 600;
+			color: white;
 		}
 		.icon {
 			margin-bottom: 15px;
@@ -67,7 +95,9 @@ button {
 		}
 		.temp {
 			font-size: 36px;
+			color: white;
 			h1 {
+				font-size: 15rem;
 				position: relative;
 				width: fit-content;
 				margin: 0 auto;
