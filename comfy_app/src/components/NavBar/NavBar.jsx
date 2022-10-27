@@ -8,14 +8,13 @@ import About from './About';
 import Contact from './Contact';
 import SignUp from './SignUp';
 import AudioVideo from './AudioVideo';
-import '../NavBar/navbar.scss';
 
 function NavBar() {
   return (
     <>
-      <div className='NavBar text-white' >
+      <div className='NavBar'>
         {['sm'].map((expand) => (
-          <Navbar key={expand} bg='#850E35' expand={expand} className='mb-3'>
+          <Navbar key={expand} bg='#FFF5E4' expand={expand} className='mb-3'>
             <Container fluid>
               <Navbar.Brand href='/about'>Comfy</Navbar.Brand>
               <Navbar.Toggle
