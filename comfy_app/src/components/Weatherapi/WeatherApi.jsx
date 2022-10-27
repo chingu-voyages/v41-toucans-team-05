@@ -6,6 +6,12 @@ import axios from 'axios';
 import Showtime from '../liveTime/Showtime';
 import useGeoLocation from '../../hooks/useGeolocation';
 
+// import cloudy from '../../../public/images/clouds.png';
+// import clear from '../../../public/images/sun.png';
+// import rainy from '../../../public/images/rain.png';
+// import snowy from '../../../public/images/snow.png';
+
+
 function WeatherApi() {
   const locations = useGeoLocation();
   const lat = JSON.stringify(locations.coordinates.lat);
@@ -53,6 +59,8 @@ function WeatherApi() {
         document.getElementById('1').style.backgroundImage = bg;
       });
   });
+
+
 
   return (
     <div className='App'>
