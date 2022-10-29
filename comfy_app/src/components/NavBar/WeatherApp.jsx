@@ -3,7 +3,7 @@ import React from 'react';
 import WeatherApi from '../Weatherapi/WeatherApi';
 import Footer from '../Footer/Footer';
 
-export default function About() {
+export default function WeatherApp() {
   return (
     <div>
       <WeatherApi />

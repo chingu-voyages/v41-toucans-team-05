@@ -4,10 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Routes, Route, Link } from 'react-router-dom';
-import HomePage from './HomePage';
+import HomePage from './WeatherApp';
 import Contact from './Contact';
 import SignUp from './SignUp';
 import AudioVideo from './AudioVideo';
+import WeatherApi from '../Weatherapi/WeatherApi';
 
 function NavBar() {
 
@@ -33,15 +34,12 @@ function NavBar() {
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className='justify-content-end flex-grow-1 pe-3'>
-                    <Nav.Link as={Link} to='/HomePage'>
-                      Home-Page
-                    </Nav.Link>
-                    <Nav.Link as={Link} to='/contact' >
-                      Contact
-                    </Nav.Link>
+                  <Nav className='justify-content-end flex-grow-1 pe-3 '>
                     <Nav.Link as={Link} to='/signUp'>
                       SignUp
+                    </Nav.Link>
+                    <Nav.Link as={Link} to='/contact' >
+                      Contact Us
                     </Nav.Link>
                     {/* <Nav.Link as={Link} to='/audioVideo'>
                       Audio/Video
@@ -55,6 +53,7 @@ function NavBar() {
       </div>
       <div>
         <Routes>
+          <Route path='/' element={<WeatherApi />} />
           <Route path='/HomePage' element={<HomePage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/signUp' element={<SignUp />} />
