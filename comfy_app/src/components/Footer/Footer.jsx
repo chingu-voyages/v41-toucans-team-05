@@ -1,57 +1,66 @@
 import React from 'react'
 import styled from 'styled-components'
+import tarek from '../Footer/tarek.jpg'
+import tommy from '../Footer/tommy.jpg'
 
 function Footer() {
   return (
     <FooterContainer className='main-footer'>
-      <div className ='footer-middle'>
-      <div className='container2'>
-      <div className='row'>
-        {/* Footer Top */}
-          <div className='footer-top'>
-            <p className ='text-bg-center'></p>
-            Contributers
-          </div>
-        {/* {Column 1} */}
-          <div className ='col-md-3 col-sm-6'>
+      <div className='footer-middle'>
+        <div className='container2'>
+          <div className='row'>
+            {/* Footer Top */}
+            <div className='footer-top'>
+              <div>
+                Welcome to Our App. Our simplified weather forecast it helps the elderly to have easy access to weather conditions and alerts.
+              </div>
+            </div>
+            {/* {Column 1} */}
+            <div className='col-md-3 col-sm-6'>
               <h4>William Fayette</h4>
-                <ul className='list-unstyled'>
+              <ul className='list-unstyled'>
+
                 <li><a href='https://github.com/william-tecnico108' target="_blank">GitHub</a></li>
                 <li><a href='/'>Lorem ipsum</a></li>
-                </ul>
-        </div>
-        {/* {Column 2} */}
-          <div className ='col-md-3 col-sm-6'>
-            <h4>Tarek</h4>
-              <ul className='list-unstyled'>
-                <li><a href='/'>Lorem ipsum</a></li>
-                <li><a href='/'>Lorem ipsum</a></li>
-                </ul>
-        </div>
-        {/* {Column 3} */}
-          <div className ='col-md-3 col-sm-6'>
-            <h4>Tommi</h4>
-              <ul className='list-unstyled'>
-                <li><a href='/'>Lorem ipsum</a></li>
-                <li><a href='/'>Lorem ipsum</a></li>
-                </ul>
-        </div>
-        {/* {Column 4} */}
-          <div className ='col-md-3 col-sm-6'>
-            <h4>Maria Chicaia</h4>
+              </ul>
+            </div>
+            {/* {Column 2} */}
+            <div className='col-md-3 col-sm-6'>
+              <img src={tarek} alt="missing image" />
+              <div>
+
                 <ul className='list-unstyled'>
-                <li><a href='/'>Lorem ipsum</a></li>
-                <li><a href='/'>Lorem ipsum</a></li>
+                  <li><a href='https://github.com/xxTarekxx' target="_blank">GitHub</a></li>
+                  <li><a href='https://www.linkedin.com/in/tarek-ismael-96777578/' target="_blank">LinkedIn</a></li>
                 </ul>
-        </div>
-    </div>
-        {/* Footer Bottom */}
+              </div>
+              <h4>Tarek</h4>
+            </div>
+            {/* {Column 3} */}
+            <div className='col-md-3 col-sm-6'>
+              <h4>Tommy</h4>
+              <img src={tommy}></img>
+              <ul className='list-unstyled'>
+                <li><a href='https://github.com/TL-Dang' target="_blank">GitHub</a></li>
+                <li><a href='https://www.linkedin.com/in/tommy-dang-307940ab/' target="_blank">LinkedIn</a></li>
+              </ul>
+            </div>
+            {/* {Column 4} */}
+            <div className='col-md-3 col-sm-6'>
+              <h4>Maria Chicaia</h4>
+              <ul className='list-unstyled'>
+                <li><a href='/'>Lorem ipsum</a></li>
+                <li><a href='/'>Lorem ipsum</a></li>
+              </ul>
+            </div>
+          </div>
+          {/* Footer Bottom */}
           <div className='footer-bottom'>
-            <p className ='text-xs-center'></p>
+            <p className='text-xs-center'></p>
             &copy;{new Date().getFullYear()} Comfy Weather - All Rights Reserved
           </div>
         </div>
-    </div>
+      </div>
     </FooterContainer>
   );
 }
