@@ -33,6 +33,7 @@ function WeatherApi() {
         setSky(res.data.weather[0].main);
         // setIcon(res.data.weather[0].icon);
         setTemp(res.data.main.temp);
+        console.log(res.data);
 
         function backGround() {
           if (res.data.weather[0].id < 250) {
