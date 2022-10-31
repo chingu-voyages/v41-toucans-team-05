@@ -4,7 +4,7 @@ function Contact() {
   const [form] = useState('Submit');
   return (
     <div className='container'>
-      <h2 className='mb-3'>Contact Us</h2>
+      <h1 className='mb-3'>Contact Us</h1>
       <h6 className='mb-3'>We will get back to you as soon as possible</h6>
       <form>
         <div className='card card-body col-md-6 mx-auto align-self-center'>
@@ -42,8 +42,8 @@ function Contact() {
             </label>
             <textarea className='form-control' id='message' rows='4' required />
           </div>
-          <div className='d-grid gap-2 d-md-flex justify-content-md-left'>
-            <button className='btn btn-info ' type='submit'>
+          <div className='d-grid gap-2"'>
+            <button className='btn btn-primary ' type='submit'>
               {form}
             </button>
           </div>
