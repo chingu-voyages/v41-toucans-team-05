@@ -40,7 +40,7 @@ User friendly weather app platform for elderly and disabled people
 
 ```bash
 
-git clone https://github.com/iamsainikhil/weather-react.git
+git clone https://github.com/chingu-voyages/v41-toucans-team-05.git
 
 ```
 - Install dependencies listed in add-on packages using `npm install`
@@ -56,6 +56,10 @@ git clone https://github.com/iamsainikhil/weather-react.git
 ```
 
 - You are set to go
+
+## Who maintains and contributes to the project
+This is a project for our personal learning process.
+
 <!-- By Tarek Ismael,  William Fayette, Tommy Dang and Maria Chicaia  -->
 <!-- # voyage-tasks
 
