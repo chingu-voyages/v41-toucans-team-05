@@ -1,3 +1,4 @@
+import "./navbar.scss"
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -34,12 +35,12 @@ function NavBar() {
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className='justify-content-end flex-grow-1 pe-3 '>
+                  <Nav className='justify-content-end flex-grow-1 pe-3'>
                     <Nav.Link as={Link} to='/signUp'>
-                      SignUp
+                      <button class="noselect blue">Sign Up</button>
                     </Nav.Link>
-                    <Nav.Link as={Link} to='/contact' >
-                      Contact Us
+                    <Nav.Link as={Link} to='/contact'>
+                      <button class="noselect blue">Contact Us</button>
                     </Nav.Link>
                     {/* <Nav.Link as={Link} to='/audioVideo'>
                       Audio/Video
