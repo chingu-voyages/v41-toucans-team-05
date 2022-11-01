@@ -1,3 +1,38 @@
-#mainbar {
-	background-color: #850e35;
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.blue {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	background: #fff5e4;
+	margin: 5px;
+	border: 2px;
+	box-shadow: -5px -5px 15px #645c4d, 5px 5px 15px #fff5e4,
+		inset 5px 5px 10px #a18e6b, inset -5px -5px 10px #fff5e4;
+	color: #222;
+	font-size: 16px;
+}
+
+button:hover {
+	box-shadow: -5px -5px 15px #6ca8e0, 5px 5px 15px #6ca8e0,
+		inset 5px 5px 10px rgb(196, 153, 89), inset -5px -5px 10px rgb(196, 153, 89);
+	font-size: 17px;
+	transition: 600ms;
+}
+
+button:focus {
+	outline: none;
+}
+
+.blue:hover {
+	color: #71b7f0;
+	text-shadow: 0px 0px 10px #71b7f0;
 }
