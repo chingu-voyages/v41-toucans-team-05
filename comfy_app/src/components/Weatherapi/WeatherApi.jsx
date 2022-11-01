@@ -1,25 +1,26 @@
-import '../../App.css';
-import '../Weatherapi/layout.scss'
+
+import './layout.scss'
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment';
 import axios from 'axios';
 import Showtime from '../liveTime/Showtime';
 import useGeoLocation from '../../hooks/useGeolocation';
 
-// import cloudy from '../../../public/images/clouds.png';
-// import clear from '../../../public/images/sun.png';
-// import rainy from '../../../public/images/rain.png';
-// import snowy from '../../../public/images/snow.png';
+const capitalize = (word) => {
+  return word.toLowerCase().split(' ').map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
 
 
-function WeatherApi() {
+const WeatherApi = () => {
   const locations = useGeoLocation();
   const lat = JSON.stringify(locations.coordinates.lat);
   const lon = JSON.stringify(locations.coordinates.lon);
-  const [name, setName] = useState([]);
-  const [sky, setSky] = useState([]);
+  const [name, setName] = useState('');
+  const [sky, setSky] = useState('');
   // const [icon, setIcon] = useState([]);
-  const [temp, setTemp] = useState([]);
+  const [temp, setTemp] = useState('');
   const today = new Date();
 
   const bg = '';
@@ -30,7 +31,7 @@ function WeatherApi() {
       )
       .then((res) => {
         setName(res.data.name);
-        setSky(res.data.weather[0].main);
+        setSky(res.data.weather[0].description);
         // setIcon(res.data.weather[0].icon);
         setTemp(res.data.main.temp);
         console.log(res.data);
@@ -61,39 +62,41 @@ function WeatherApi() {
       });
   });
 
-
-
   return (
     <div className='App'>
-      <div className='container' id='1'>
-        <div className='top'>
-          <div className='location'>
-            <p>
-              <span className='material-icons'></span>
-              {name}
-            </p>
-          </div>
-          <div className='date'>
-            <Moment format='MMM DD, ddd'>{today}</Moment>
-            <Showtime />
-          </div>
-          <div className='sky'>
-            <p>{sky}</p>
-          </div>
-          <div className='icon' id='2'>
-            {/* <img src='' alt='' /> */}
-          </div>
-          <div className='temp'>
-            <h1>{Math.round(1.8 * (temp - 273) + 32)}</h1>
+      <div className='weather' id='1'>
+        <div id="cloud-intro">
+          <div className='top'>
+            <div className='location'>
+              <p>
+                <svg className="svgname" width="32px" height="40px" viewBox="-5 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <path id="Path_19" data-name="Path 19" d="M1002,44a10,10,0,0,0-10,10c0,5.523,10,20,10,20s10-14.477,10-20A10,10,0,0,0,1002,44Zm0,13a3,3,0,1,1,3-3A3,3,0,0,1,1002,57Z" transform="translate(-991 -43)" fill="#cbff94" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </svg>
+                <span className='material-icons'>
+                  {name.charAt(0).toUpperCase()}{name.slice(1)}</span>
+              </p>
+            </div>
+            <div className='sky'>
+              <p>
+                {/* {sky.charAt(0).toUpperCase() + sky.slice(1)} */}
+                {capitalize(sky)}
+              </p>
+            </div>
+            <div className='icon' id='2'>
+              {/* <img src='' alt='' /> */}
+            </div>
+            <div className='temp'>
+              <h1>{Math.round(1.8 * (temp - 273) + 32)}°F</h1>
+            </div>
+            <div className='date'>
+              <Moment format='MMM DD, ddd'>{today}</Moment>
+              <Showtime />
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   );
 }
-
-// function isactive() {
-
-// }
-
 export default WeatherApi;
