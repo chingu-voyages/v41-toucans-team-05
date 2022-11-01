@@ -1,38 +1,61 @@
 # **ComfyMe** 
 
-##Overview
+## Overview
 
 This app was created for Chingu Voyage 41. It pulls data from [OpenWeather](https://openweathermap.org/api)
 
 **LIVE LINK**: [ComfyMe](https://v41-toucans-team-05.vercel.app/)
 
-##Overview
+## Purpose 
+User friendly weather app platform for elderly and disabled people
 
-##Features
+## Features
 
--Data concerning location, date, time and temperature are displayed
+- Location, date, time and temperature data displayed
 
--Data relating to location and temperature are depended on geolocation.
+- Location and temperature data depend on geolocation.
 
-##Tech/Dependencies used
--[Create React App](https://create-react-app.dev/)
+- Dynamic and animated background based on temperature data
 
--Dependencies included with React:
-    -React-Dom
+## Tech/Dependencies used
+- [Create React App](https://create-react-app.dev/)
 
-    -React-Scripts
+- Dependencies included with React:
+    - React-Dom
 
--Add-on packages include: 
-    -[Axios](https://axios-http.com/docs/intro)
-    -[Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-    -[React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
-    -[Moment JS](https://momentjs.com/docs/)
-    -[SASS](https://sass-lang.com/)
-    -[Styled-Components](https://styled-components.com/docs)
-    -[Web Vitals](https://www.npmjs.com/package/web-vitals)
+    - React-Scripts
 
-##Getting Started
+- Add-on packages include: 
+    - [Axios](https://axios-http.com/docs/intro)
+    - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+    - [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
+    - [Moment JS](https://momentjs.com/docs/)
+    - [SASS](https://sass-lang.com/)
+    - [Styled-Components](https://styled-components.com/docs)
+    - [Web Vitals](https://www.npmjs.com/package/web-vitals)
+## Getting Started
+- Create OpenWeather account for API key, follow these [instructions](https://openweathermap.org/api) for more detail.
 
+- Clone the repository 
+
+```bash
+
+git clone https://github.com/iamsainikhil/weather-react.git
+
+```
+- Install dependencies listed in add-on packages using `npm install`
+
+- Within WeatherApi.jsx (comfy_app > src > components > Weatherapi > WeatherApi.jsx), line 30, paste your API key into the following axios get call:
+
+```
+
+.get(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&&appid={YOUR API KEY GOES HERE}`
+      )
+
+```
+
+- You are set to go
 <!-- By Tarek Ismael,  William Fayette, Tommy Dang and Maria Chicaia  -->
 <!-- # voyage-tasks
 
