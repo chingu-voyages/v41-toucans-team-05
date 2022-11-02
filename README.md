@@ -1,4 +1,4 @@
-# **ComfyMe Weatjer**
+# **ComfyMe Weather**
 
 ## Overview
 
