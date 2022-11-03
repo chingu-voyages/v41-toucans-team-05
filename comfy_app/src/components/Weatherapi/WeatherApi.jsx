@@ -64,38 +64,38 @@ const WeatherApi = () => {
 
   return (
     <div className='App'>
-      <div className='weather' id='1'>
-        <div id="cloud-intro">
-          <div className='top'>
-            <div className='location'>
-              <p>
-                <svg className="svgname" width="32px" height="40px" viewBox="-5 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <path id="Path_19" data-name="Path 19" d="M1002,44a10,10,0,0,0-10,10c0,5.523,10,20,10,20s10-14.477,10-20A10,10,0,0,0,1002,44Zm0,13a3,3,0,1,1,3-3A3,3,0,0,1,1002,57Z" transform="translate(-991 -43)" fill="#cbff94" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                </svg>
-                <span className='material-icons'>
-                  {name.charAt(0).toUpperCase()}{name.slice(1)}</span>
-              </p>
-            </div>
-            <div className='sky'>
-              <p>
-                {/* {sky.charAt(0).toUpperCase() + sky.slice(1)} */}
-                {capitalize(sky)}
-              </p>
-            </div>
-            <div className='icon' id='2'>
-              {/* <img src='' alt='' /> */}
-            </div>
-            <div className='temp'>
-              <h1>{Math.round(1.8 * (temp - 273) + 32)}°F</h1>
-            </div>
-            <div className='date'>
-              <Moment format='MMM DD, ddd'>{today}</Moment>
-              <Showtime />
+      <div className="container">
+        <div className='weather' id='1'>
+          <div id="cloud-intro">
+            <div className='top'>
+              <div className='location'>
+                <p>
+                  <svg className="svgname" width="32px" height="40px" viewBox="-5 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path id="Path_19" data-name="Path 19" d="M1002,44a10,10,0,0,0-10,10c0,5.523,10,20,10,20s10-14.477,10-20A10,10,0,0,0,1002,44Zm0,13a3,3,0,1,1,3-3A3,3,0,0,1,1002,57Z" transform="translate(-991 -43)" fill="#cbff94" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </svg>
+                  <span className='material-icons'>
+                    {name.charAt(0).toUpperCase()}{name.slice(1)}</span>
+                </p>
+              </div>
+              <div className='sky'>
+                <p>
+                  {/* {sky.charAt(0).toUpperCase() + sky.slice(1)} */}
+                  {capitalize(sky)}
+                </p>
+              </div>
+              <div className='temp'>
+                <h1>{Math.round(1.8 * (temp - 273) + 32)}°</h1>
+              </div>
+              <div className='date'>
+                <Moment format='MMM DD, ddd'>{today}</Moment>
+                <Showtime />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
 
   );
 }
