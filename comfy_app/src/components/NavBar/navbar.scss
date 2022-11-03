@@ -22,7 +22,7 @@
 }
 
 button:hover {
-	box-shadow: -5px -5px 15px #6ca8e0, 5px 5px 15px #6ca8e0,
+	box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #092946,
 		inset 5px 5px 10px rgb(196, 153, 89), inset -5px -5px 10px rgb(196, 153, 89);
 	font-size: 17px;
 	transition: 600ms;
@@ -35,4 +35,14 @@ button:focus {
 .blue:hover {
 	color: #71b7f0;
 	text-shadow: 0px 0px 10px #71b7f0;
+}
+
+.navBarMenu {
+	background-color: #fff5e4;
+	justify-content: center;
+	text-align: center;
+}
+
+.logoPadding {
+	padding-left: 50px;
 }

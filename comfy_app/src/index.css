@@ -1,5 +1,4 @@
-body {
-  margin: 0;
+body, html {
   font-family: 'Noto Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

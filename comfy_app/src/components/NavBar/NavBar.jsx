@@ -1,9 +1,6 @@
 import "./navbar.scss"
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
 import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from './WeatherApp';
 import Contact from './Contact';
@@ -14,14 +11,13 @@ import logo from '../images/logo.png'
 
 function NavBar() {
 
-
   return (
     <>
       <div className='NavBar'>
         {['sm'].map((expand) => (
           <Navbar key={expand} bg='#FFF5E4' expand={expand} className='mb-3'>
             <Container fluid>
-              <Navbar.Brand href='/'><img src={logo} width="115px" height="115px" alt="Comfy Weather Logo" /></Navbar.Brand>
+              <Navbar.Brand href='/'><img className="logoPadding" src={logo} width="220px" height="150px" alt="Comfy Weather Logo" /></Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
               />
@@ -29,15 +25,16 @@ function NavBar() {
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement='end'
+                className='navBarMenu'
               >
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header closeButton className='navBarMenu'>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    Comfy
+                    <img src={logo} width="115px" height="115px" alt="Comfy Weather Logo" />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
+                <Offcanvas.Body className='navBarMenu'>
                   <Nav className='justify-content-end flex-grow-1 pe-3'>
-                    <Nav.Link as={Link} to='/signUp'>
+                    <Nav.Link data-toggle="collapse" as={Link} to='/signUp'>
                       <button class="noselect blue">Sign Up</button>
                     </Nav.Link>
                     <Nav.Link as={Link} to='/contact'>
