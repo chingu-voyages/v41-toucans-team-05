@@ -8,8 +8,8 @@
 	padding-bottom: 40px;
 }
 .weather {
-	width: 450px;
-	height: 450px;
+	width: 80%;
+	height: 80%;
 	border-radius: 6px;
 	box-shadow: 15px 10px 10px -2px rgb(0 0 0 /90%);
 	background-color: #333;
@@ -41,22 +41,13 @@
 			color: white;
 			text-align: center;
 		}
-		.icon {
-			margin-bottom: 15px;
-			color: white;
-			img {
-				width: 80%;
-				background-color: rgba(255, 255, 255, 0.3);
-				border-radius: 100%;
-				vertical-align: top;
-			}
-		}
+
 		.temp {
-			font-size: 28px;
+			// font-size: 1.2rem;
 			color: white;
 			padding-top: 5px;
 			h1 {
-				font-size: 12rem;
+				font-size: 11em;
 				position: relative;
 				width: fit-content;
 				margin: 0 auto;
