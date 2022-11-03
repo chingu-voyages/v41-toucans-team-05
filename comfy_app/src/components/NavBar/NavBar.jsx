@@ -10,6 +10,7 @@ import Contact from './Contact';
 import SignUp from './SignUp';
 import AudioVideo from './AudioVideo';
 import WeatherApi from '../Weatherapi/WeatherApi';
+import logo from '../images/logo.png'
 
 function NavBar() {
 
@@ -20,7 +21,7 @@ function NavBar() {
         {['sm'].map((expand) => (
           <Navbar key={expand} bg='#FFF5E4' expand={expand} className='mb-3'>
             <Container fluid>
-              <Navbar.Brand href='/'>Comfy</Navbar.Brand>
+              <Navbar.Brand href='/'><img src={logo} width="115px" height="115px" alt="Comfy Weather Logo" /></Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
               />
