@@ -1,5 +1,5 @@
 # **Comfy Weather**
-![Untitled](https://user-images.githubusercontent.com/52683281/199876277-951517ef-c920-47b7-8c95-c0de17e36033.jpg)
+![Comfy_Weather](https://user-images.githubusercontent.com/52683281/199876437-6e15f5af-af9c-4e57-8afa-77d3414169c2.jpg)
 
 ## Overview
 
