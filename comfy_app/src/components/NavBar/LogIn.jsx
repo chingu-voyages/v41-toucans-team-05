@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Contact() {
+function LogIn() {
     const [form] = useState('Log In');
     return (
         <div className='container'>
