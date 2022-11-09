@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  const [form] = useState('Submit');
+  const [form] = useState('Send');
   return (
     <div className='container'>
       <h1 className='mb-3'>Contact Us</h1>
