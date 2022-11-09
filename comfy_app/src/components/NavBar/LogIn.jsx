@@ -39,4 +39,4 @@ function LogIn() {
     );
 }
 
-export default Contact;
+export default LogIn;
