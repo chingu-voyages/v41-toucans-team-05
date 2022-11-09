@@ -5,6 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from './WeatherApp';
 import Contact from './Contact';
 import SignUp from './SignUp';
+import LogIn from './LogIn';
 import AudioVideo from './AudioVideo';
 import WeatherApi from '../Weatherapi/WeatherApi';
 import logo from '../images/logo.png'
@@ -34,15 +35,15 @@ function NavBar() {
                 </Offcanvas.Header>
                 <Offcanvas.Body className='navBarMenu'>
                   <Nav className='justify-content-end flex-grow-1 pe-3'>
+                    <Nav.Link data-toggle="collapse" as={Link} to='/LogIn'>
+                      <button class="noselect blue">Log In</button>
+                    </Nav.Link>
                     <Nav.Link data-toggle="collapse" as={Link} to='/signUp'>
                       <button class="noselect blue">Sign Up</button>
                     </Nav.Link>
                     <Nav.Link as={Link} to='/contact'>
                       <button class="noselect blue">Contact Us</button>
                     </Nav.Link>
-                    {/* <Nav.Link as={Link} to='/audioVideo'>
-                      Audio/Video
-                    </Nav.Link> */}
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
@@ -56,6 +57,7 @@ function NavBar() {
           <Route path='/HomePage' element={<HomePage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/signUp' element={<SignUp />} />
+          <Route path='/LogIn' element={<LogIn />} />
           <Route path='/audioVideo' element={<AudioVideo />} />
         </Routes>
       </div>
