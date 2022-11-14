@@ -6,12 +6,12 @@ const useGeolocation = () => {
     coordinates: { lat: 0, lon: 0 },
   });
 
-  const onSuccess = (location) => {
+  const onSuccess = (locations) => {
     setLocation({
       loaded: true,
       coordinates: {
-        lat: location.coords.latitude,
-        lon: location.coords.longitude,
+        lat: locations.coords.latitude,
+        lon: locations.coords.longitude,
       },
     });
   };

@@ -1,22 +1,24 @@
+import "./navbar.scss"
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
 import { Routes, Route, Link } from 'react-router-dom';
-import About from './About';
+import HomePage from './WeatherApp';
 import Contact from './Contact';
 import SignUp from './SignUp';
+import LogIn from './LogIn';
 import AudioVideo from './AudioVideo';
+import WeatherApi from '../Weatherapi/WeatherApi';
+import logo from '../images/logo.png'
 
 function NavBar() {
+
   return (
     <>
       <div className='NavBar'>
         {['sm'].map((expand) => (
-          <Navbar key={expand} bg='light' expand={expand} className='mb-3'>
+          <Navbar key={expand} bg='#FFF5E4' expand={expand} className='mb-3'>
             <Container fluid>
-              <Navbar.Brand href='/about'>Comfy</Navbar.Brand>
+              <Navbar.Brand href='/'><img className="logoPadding" src={logo} width="220px" height="150px" alt="Comfy Weather Logo" /></Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
               />
@@ -24,25 +26,23 @@ function NavBar() {
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement='end'
+                className='navBarMenu'
               >
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header closeButton className='navBarMenu'>
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    Comfy
+                    <img src={logo} width="115px" height="115px" alt="Comfy Weather Logo" />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
+                <Offcanvas.Body className='navBarMenu'>
                   <Nav className='justify-content-end flex-grow-1 pe-3'>
-                    <Nav.Link as={Link} to='/about'>
-                      About
+                    <Nav.Link data-toggle="collapse" as={Link} to='/LogIn'>
+                      <button class="noselect blue">Log In</button>
+                    </Nav.Link>
+                    <Nav.Link data-toggle="collapse" as={Link} to='/signUp'>
+                      <button class="noselect blue">Sign Up</button>
                     </Nav.Link>
                     <Nav.Link as={Link} to='/contact'>
-                      Contact
-                    </Nav.Link>
-                    <Nav.Link as={Link} to='/signUp'>
-                      SignUp
-                    </Nav.Link>
-                    <Nav.Link as={Link} to='/audioVideo'>
-                      Audio/Video
+                      <button class="noselect blue">Contact Us</button>
                     </Nav.Link>
                   </Nav>
                 </Offcanvas.Body>
@@ -53,9 +53,11 @@ function NavBar() {
       </div>
       <div>
         <Routes>
-          <Route path='/about' element={<About />} />
+          <Route path='/' element={<WeatherApi />} />
+          <Route path='/HomePage' element={<HomePage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/signUp' element={<SignUp />} />
+          <Route path='/LogIn' element={<LogIn />} />
           <Route path='/audioVideo' element={<AudioVideo />} />
         </Routes>
       </div>

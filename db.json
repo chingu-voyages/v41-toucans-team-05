@@ -1,0 +1,42 @@
+{
+  // "alerts": [
+  //   {
+  //     "id": 1,
+  //     // Weather below 50 degrees or above 90
+  //     "report 1": "Bad Wether",
+  //     // Anything inbetween 50 and 90 degrees
+  //     "report 3": "Good Weather"
+  //   }
+
+
+
+
+    "goodMessages": [
+      {
+        "message1": "Great to be outside to enjoy wearther",
+        "message2": "Enjoy the Weather",
+        "message3": "Nice and Sunny Outside",
+        "message4": "Take some time for yourself enjoy the weather",
+        "message5": "Have a great time enjoying the weather",
+      }
+  ],
+
+    "badMessageCold": [
+     {
+        "message1": "Stay inside ",
+        "message2": "Stay Warm",
+        "message3": "Wear something warm",
+        "message4": "Remeber to wear your jacket outside",
+        "message5": "Keep your boy temperture warm",
+  }
+],
+    "badMessageHot": [
+  {
+        "message1": "Stay inside ",
+        "message2": "Stay Hydrated",
+        "message3": "Don't forget your sun screen",
+        "message4": "Stay cool",
+        "message5": "Check if your pets are hydrated",
+}
+]
+}
